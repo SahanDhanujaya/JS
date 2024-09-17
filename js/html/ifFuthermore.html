@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="num">Enter Mobile Number:</label><br>
+    <input type="text" id="num"><br>
+    <button type="button" onclick=validation()>Validate</button>
+    <h3 id="msg"></h3>
+    <script language="JavaScript" type="text/JavaScript">
+        function validation() {
+            let phoneNumber = document.getElementById("num").value;
+            let numLength = phoneNumber.length;
+            let firstNums = phoneNumber.substr(0, 2);
+            let num;
+            if (numLength < 9) {
+                alert("Numbers missing.Please check again!!");
+                document.getElementById("msg").innerHTML = "Number is invalid Number";
+            } else if(numLength > 11){
+                alert("Number is longer please check the number!!");
+                document.getElementById("msg").innerHTML = "Number is invalid Number please try again!!";
+            } else if(numLength == 9 && firstNums == 94){
+                alert("Number is valid number");
+                document.getElementById("msg").innerHTML = "Number is valid Number :" + phoneNumber;
+            } else if(numLength == 9 && firstNums != 94){
+                alert("Number is valid number");
+                document.getElementById("msg").innerHTML = "Number is valid Number : 94" + phoneNumber.substr(2, 7);
+            } else if(firstNums != 94 || firstNums!=77 || firstNums!=71 || firstNums!=70 || firstNums!=75 || firstNums!=76 || firstNums!=78 || firstNums!=72 || firstNums!=74){
+                alert("Number is invalid number");
+                document.getElementById("msg").innerHTML = "Number is invalid Number";
+            }
+            
+        }
+    </script>
+</body>
+</html> 

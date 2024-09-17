@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3 id="day">Today is :</h3>
+    <script language="JavaScript" type="text/JavaScript">
+        {
+        let x =10;
+        switch (x) {
+            case 0:
+                console.log("X = 0");
+                break;
+            case 1:
+                console.log("X = 1");
+                break;
+            case 2:
+                console.log("X = 2");
+                break;
+            case 3:
+                console.log("X = 3");
+                break;
+            case 4:
+                console.log("X = 4");
+                break;
+            case 5:
+                console.log("X = 5");
+                break;
+            default:
+                console.log("No value");
+                break;
+        }
+    }
+    let x = new Date().getDay();
+    let today;
+    switch (x) {
+        case 0:
+            today = "Sunday";
+            document.getElementById("day").innerHTML = "Today is :"+ today;
+            break;
+        case 1:
+            today = "Monday";
+            document.getElementById("day").innerHTML = "Today is :"+ today;
+            break;
+        case 2:
+            today = "Tuesday";
+            document.getElementById("day").innerHTML = "Today is :"+ today;
+            break;
+        case 3:
+            today = "Wednessday";
+            document.getElementById("day").innerHTML = "Today is :"+ today;
+            break;
+        case 4:
+            today = "Thursday";
+            document.getElementById("day").innerHTML = "Today is :"+ today;
+            break;
+        case 5:
+            today = "Friday";
+            document.getElementById("day").innerHTML = "Today is :"+ today;
+            break;
+        case 6:
+            today = "Saturday";
+            document.getElementById("day").innerHTML = "Today is :"+ today;
+            break;
+        default:
+            break;
+    }
+    </script>
+</body>
+
+</html>

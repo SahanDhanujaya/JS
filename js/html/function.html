@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="fNum">First Number:</label>
+    <input type="text" placeholder="enter a number" id="fNum"><br>
+    <label for="secNum">Second Number:</label>
+    <input type="text" placeholder="enter a number" id="secNum">
+    <button onclick="addNumbers()">Add</button>
+    <h3 id="answer"></h3>
+    <script>
+        function addNumbers(){
+            let firstNum = document.getElementById("fNum").value;
+            let secondNum = document.getElementById("secNum").value;
+            let total = parseInt(firstNum) + parseInt(secondNum);
+            document.getElementById("answer").innerHTML="Answer is "+total;
+        }
+        function main(x,y){
+            return x*y;
+        }
+        let answer = main(10,20);
+        console.log(answer);
+    </script>
+    
+</body>
+</html>

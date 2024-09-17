@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+<body>
+    <label for="fNum">First Num :</label>
+    <input type="text" id="fNum">
+    <label for="secNum">Second Num :</label>
+    <input type="text" id="secNum">
+    <button id="btn" onclick="operation(document.getElementById('fNum').value,document.getElementById('secNum').value)">Operate</button>
+    <h3 id="answer">The answer is :</h3>
+    <script>
+        function operation(x,y){
+            let result = parseInt(x) / parseInt(y);
+            document.getElementById("answer").innerHTML = "The Answer is :" + result;
+        }
+    </script>
+</body>
+</html>
